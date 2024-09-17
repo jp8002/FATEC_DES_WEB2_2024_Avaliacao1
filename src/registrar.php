@@ -11,12 +11,11 @@
             $handle = fopen("ge.txt","a");
         }
 
-        #Laboratorio1 | 18/09/2024 | Instalar VS Code
-
 
         fwrite($handle, $_POST['laboratorio']." | ".$_POST['prazo']." | ".$_POST['solicitacao'].PHP_EOL);
         $_POST = array();
         
+        fclose($handle);
     }
 ?>
 
@@ -67,7 +66,6 @@
 
         <button type="submit" class="btn btn-primary">Registrar</button>
         <a href="dash_coor.php"><button type="button" class="btn btn-danger">Voltar</button></a>
-
 
     </form>
     
