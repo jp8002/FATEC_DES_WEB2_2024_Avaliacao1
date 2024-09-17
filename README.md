@@ -1,9 +1,9 @@
 # FATEC_DES_WEB2_2024_Avaliacao1
 Repositório direcionado a catalogar todas as versões da 1ª atividade avaliativa da matéria de DW2. 
 
-<b>TELAS DESENVOLVIDAS</b> 
+<s><b>TELAS DESENVOLVIDAS</b></s>
 
-INDEX  
+<b>INDEX</b>  
 
 Tela de login do sistema. O logins já registrados são:   
 
@@ -19,7 +19,7 @@ Tela de login do sistema. O logins já registrados são:
 
  
 
-DASHBOARD(COORDENAÇÃO) 
+<b>DASHBOARD(COORDENAÇÃO)</b>
 
 Central de funções disponibilizadas aos coordenadores, essa tela possui os seguintes elementos interativo: 
 
@@ -33,7 +33,7 @@ Botão logout: encerra a sessão e redireciona para a tela de login.
 
  
 
-DASHBOARD(COORDENAÇÃO) 
+<b>DASHBOARD(COORDENAÇÃO)</b>
 
 Central de funções disponibilizadas aos técnicos, essa tela possui os seguintes elementos interativo: 
 
