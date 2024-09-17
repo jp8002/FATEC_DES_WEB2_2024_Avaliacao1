@@ -24,13 +24,13 @@ Tela de login do sistema. O logins já registrados são:
 Central de funções disponibilizadas aos coordenadores, essa tela possui os seguintes elementos interativo: 
 
 <ul>
-	<li>Botão registrar: redireciona o usuário para a tela de registro de requisições.</li>
+   <li>Botão registrar: redireciona o usuário para a tela de registro de requisições.</li>
 
-	<li>Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso.</li>
+   <li>Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso.</li>
 
-	<li>Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações.</li>
+   <li>Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações.</li>
 
-	<li>Botão logout: encerra a sessão e redireciona para a tela de login.</li>
+   <li>Botão logout: encerra a sessão e redireciona para a tela de login.</li>
 
 </ul>
 
@@ -39,10 +39,12 @@ Central de funções disponibilizadas aos coordenadores, essa tela possui os seg
 
 <b>DASHBOARD(COORDENAÇÃO)</b>
 
-Central de funções disponibilizadas aos técnicos, essa tela possui os seguintes elementos interativo: 
+<ul>
+   <li>Central de funções disponibilizadas aos técnicos, essa tela possui os seguintes elementos interativo:</li> 
 
-Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso. 
+   <li>Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso. </li>
 
-Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações. 
+   <li>Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações. </li>
 
-Botão logout: encerra a sessão e redireciona para a tela de login. 
+   <li>Botão logout: encerra a sessão e redireciona para a tela de login. </li>
+</ul>
