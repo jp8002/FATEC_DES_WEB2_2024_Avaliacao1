@@ -19,7 +19,7 @@ Tela de login do sistema. O logins já registrados são:
 
  
 
-<b>DASHBOARD(COORDENAÇÃO)</b>
+<b>DASHBOARD(TÉCNICOS)</b>
 
 Central de funções disponibilizadas aos coordenadores, essa tela possui os seguintes elementos interativo: 
 
@@ -63,4 +63,18 @@ Central de funções disponibilizadas aos coordenadores, essa tela possui os seg
    <li>Textarea: Elemento html que permite a inserção de longos textos.</li>  
 </ul>
 
+<b>Visualizar solicitações</b> 
 
+Tela voltada a permitir que tanto o coordenador quanto o técnico possam consultar a lista de solicitações por curso. Essa tela possui os seguintes elementos interativos: 
+
+ 
+<ul>
+   <li>Select: Campo de seleção.</li>
+
+   <li>Botão mostrar: Confirma a seleção e pede ao servidor os dados referentes ao curso escolhido. </li>
+
+   <li>Botão voltar: possibilita retornar para a deshboard. </li>
+
+</ul>
+
+ 
