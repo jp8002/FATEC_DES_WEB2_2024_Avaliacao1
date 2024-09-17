@@ -25,7 +25,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Mostrar</button>
-        <a href="dash_coor.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="redirect.php"><button type="button" class="btn btn-danger">Voltar</button></a>
 
     </form>
 
