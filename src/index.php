@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     if (isset($_SESSION["auth"]) && $_SESSION['auth'] == TRUE && $_SESSION['user'] == "coordenacao") {
         header("location:dash_coor.php");
     }
@@ -7,19 +8,27 @@
     elseif (isset($_SESSION["auth"]) && $_SESSION['auth'] == TRUE && $_SESSION['user'] == "tecnico")  {
             $_SESSION["user"] = "tecnico";
             header("location:dash_tec.php");
-        }
+    }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_SESSION["auth"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_SESSION["auth"]) && !empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION["auth"] = TRUE;
 
-        if ($_POST["login"] == "adm" && $_POST["senha"] == "1234")  {
+        if ($_POST["usuario"] == "adm" && $_POST["senha"] == "1234")  {
             $_SESSION["user"] = "coordenacao";
             header("location:dash_coor.php");
         }
 
-        elseif ($_POST["login"] == "casse" && $_POST["senha"] == "senha")  {
+        elseif ($_POST["usuario"] == "casse" && $_POST["senha"] == "senha")  {
             $_SESSION["user"] = "tecnico";
             header("location:dash_tec.php");
+        }
+
+        else{
+            session_destroy();
+            echo "<div class='alert alert-danger' role='alert'>";
+            echo 'Usuário e/ou senha inválidos. Tente novamente.';
+            echo '</div>';
+            
         }
     }
 
@@ -36,19 +45,20 @@
 <body>
 
 <div class="container-fluid">
-    <form class="mx-auto mt-5 w-25" action="<?php $_PHP_SELF?>" method="post">
+    <form class="mx-auto mt-5 w-25 border border-dark rounded p-3" action="<?php $_PHP_SELF?>" method="post">
+        <h1 class="text-center">LOGIN</h1>
         <div class="form-group ">
-            <label for="exampleInputEmail1">Login</label>
-            <input type="text" class="form-control" id="login" name="login" placeholder="Seu login">
+            <label for="exampleInputEmail1">Usuário</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Seu nome de usuário">
         </div>
 
         <div class="form-group">
             <label for="Senha">Senha</label>
-            <input type="password" class="form-control" id="Senha" name="senha" placeholder="Senha">
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
         </div>
 
         <div class="form-group">
-            <small>Quero entrar como <a href="">convidado</a>.</small>
+            <small>Quero <a href="todo.php">visualizar todas as solicitações</a>.</small>
         </div>
         
         <button type="submit" class="btn btn-primary">Enviar</button>

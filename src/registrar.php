@@ -1,6 +1,9 @@
 <?php
     require "start.php";
     require "head.html";
+    if( $_SESSION['user'] != "coordenacao"){
+        header("location:index.php");
+    }
 
     if($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['laboratorio'] != "" && $_POST['prazo'] != "" && $_POST['solicitacao'] != ""  && $_POST['curso'] != ""){
 
@@ -11,12 +14,15 @@
             $handle = fopen("ge.txt","a");
         }
 
+        $data = date("d-m-Y", strtotime($_POST['prazo']));
 
-        fwrite($handle, $_POST['laboratorio']." | ".$_POST['prazo']." | ".$_POST['solicitacao'].PHP_EOL);
-        $_POST = array();
-        
+        echo $data;
+
+        fwrite($handle, $_POST['laboratorio']." | ".$data." | ".$_POST['solicitacao'].PHP_EOL);
+                
         fclose($handle);
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -29,12 +35,13 @@
 <body>
     
     <form  class="mx-auto mt-5 w-25" action="<?php $_PHP_SELF?>" method="post">
-        <h1 >Área de Registro</h1>
+        <h1 class="text-center">Área de Registro</h1>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="laboratorio">laboratórios</label>
+            <label class="input-group-text" for="laboratorio">Laboratórios</label>
           </div>
           <select class="custom-select" id="laboratorio" name="laboratorio">
+            <option value="" disabled selected hidden>Escolha um Laboratório</option>
             <option value="Laboratório 1">Laboratório 1</option>
             <option value="Laboratório 2">Laboratório 2</option>
             <option value="Laboratório 3">Laboratório 3</option>
@@ -55,13 +62,15 @@
           <textarea rows="3" cols="80" name="solicitacao"></textarea>
         </div>
 
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="curso">Curso atendido</label>
-          </div>
-          <select class="custom-select" id="curso" name="curso">
-            <option value="DSM">DSM</option>
-            <option value="GE">GE</option>
-          </select>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="curso">Curso atendido</label>
+              </div>
+              <select class="custom-select" id="curso" name="curso">
+                <option value="" disabled selected hidden>Escolha um curso</option>
+                <option value="DSM">DSM</option>
+                <option value="GE">GE</option>
+              </select>
         </div>
 
         <button type="submit" class="btn btn-primary">Registrar</button>
