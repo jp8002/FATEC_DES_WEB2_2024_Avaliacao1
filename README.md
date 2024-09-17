@@ -1,7 +1,7 @@
 # FATEC_DES_WEB2_2024_Avaliacao1
 Repositório direcionado a catalogar todas as versões da 1ª atividade avaliativa da matéria de DW2. 
 
-TELAS DESENVOLVIDAS 
+<b>TELAS DESENVOLVIDAS</b> 
 
 INDEX  
 
