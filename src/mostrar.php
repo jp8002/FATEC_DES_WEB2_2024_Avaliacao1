@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mostrar</title>
+    <title>Visualizar</title>
 </head>
 <body>
 
