@@ -1,7 +1,7 @@
 # FATEC_DES_WEB2_2024_Avaliacao1
 Repositório direcionado a catalogar todas as versões da 1ª atividade avaliativa da matéria de DW2. 
 
-<s><b>TELAS DESENVOLVIDAS</b></s>
+<u><b>TELAS DESENVOLVIDAS</b></u>
 
 <b>INDEX</b>  
 
@@ -23,13 +23,17 @@ Tela de login do sistema. O logins já registrados são:
 
 Central de funções disponibilizadas aos coordenadores, essa tela possui os seguintes elementos interativo: 
 
-Botão registrar: redireciona o usuário para a tela de registro de requisições. 
+<ul>
+<li>Botão registrar: redireciona o usuário para a tela de registro de requisições.</li>
 
-Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso. 
+<li>Botão visualizar solicitações: redireciona o usuário para a tela de visualização de solicitações por curso.</li>
 
-Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações. 
+<li>Botão todas as solicitações: redireciona o usuário para a tela de visualização de todas as solicitações.</li>
 
-Botão logout: encerra a sessão e redireciona para a tela de login. 
+<li>Botão logout: encerra a sessão e redireciona para a tela de login.</li>
+
+</ul>
+
 
  
 
