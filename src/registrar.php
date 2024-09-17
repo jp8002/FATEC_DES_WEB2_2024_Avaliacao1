@@ -1,7 +1,23 @@
 <?php
     require "start.php";
     require "head.html";
-    var_dump($_POST);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['laboratorio'] != "" && $_POST['prazo'] != "" && $_POST['solicitacao'] != ""  && $_POST['curso'] != ""){
+
+        if ($_POST['curso'] == "DSM") {
+            $handle = fopen("dsm.txt","a");
+        }
+        elseif ($_POST['curso'] == "GE"){
+            $handle = fopen("ge.txt","a");
+        }
+
+        #Laboratorio1 | 18/09/2024 | Instalar VS Code
+
+
+        fwrite($handle, $_POST['laboratorio']." | ".$_POST['prazo']." | ".$_POST['solicitacao'].PHP_EOL);
+        $_POST = array();
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +46,7 @@
           <div class="input-group-prepend">
             <label class="input-group-text" for="prazo">Prazo Limite</label>
           </div>
-          <input type="date" name="pazo">
+          <input type="date" name="prazo">
         </div>
 
         <div class="input-group mb-3">
@@ -49,7 +65,9 @@
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+        <a href="dash_coor.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+
 
     </form>
     
