@@ -58,7 +58,7 @@
 
                         if (!empty($line)) {
                             echo " <li class='list-group-item d-flex justify-content-between align-items-center'>".$line."<span class='badge badge-primary badge-pill'>";
-                            echo $_POST['curso']."</span>";
+                            echo $_POST['curso']."</span></li>";
                         }
                     }
                     echo "</ul>"; 
