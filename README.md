@@ -48,3 +48,19 @@ Central de funções disponibilizadas aos coordenadores, essa tela possui os seg
 
    <li>Botão logout: encerra a sessão e redireciona para a tela de login. </li>
 </ul>
+
+<b>REGISTRAR</b> 
+
+<ul>
+   <li>Tela de registro de solicitações, essa possui os seguintes elementos:</li>
+
+   <li>Form : um formulario para enviar os dados para o servidor. </li>
+
+   <li>Select: Campo de seleção. </li>
+
+   <li>Input date: input do tipo date.</li> 
+
+   <li>Textarea: Elemento html que permite a inserção de longos textos.</li>  
+</ul>
+
+
