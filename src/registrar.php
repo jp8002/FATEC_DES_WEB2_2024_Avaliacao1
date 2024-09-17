@@ -16,8 +16,6 @@
 
         $data = date("d-m-Y", strtotime($_POST['prazo']));
 
-        echo $data;
-
         fwrite($handle, $_POST['laboratorio']." | ".$data." | ".$_POST['solicitacao'].PHP_EOL);
                 
         fclose($handle);

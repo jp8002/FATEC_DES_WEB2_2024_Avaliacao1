@@ -17,6 +17,7 @@
 	<h1>Área da Coordenação</h1>
 	<a href="registrar.php"><button type="button" class="btn btn-primary">Registrar</button></a>
 	<a href="mostrar.php"><button type="button" class="btn btn-success">Visualizar solicitações</button></a>
+	<a href="todo.php"><button type="button" class="btn btn-info">Visualizar todas as solicitações</button></a>
 	<a href="logout.php"><button type="button" class="btn btn-danger">Logout</button></a>
 </body>
 </html>

@@ -35,12 +35,20 @@
 
         <div class="mx-auto mt-5 w-50">
             <?php
+
                 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-                    if ($_POST['curso'] == "DSM") {
+                    if ($_POST['curso'] == "DSM" && file_exists("dsm.txt")) {
                         $handle = fopen("dsm.txt","r");
                     }
-                    elseif ($_POST['curso'] == "GE"){
+                    elseif ($_POST['curso'] == "GE" && file_exists("ge.txt")){
                         $handle = fopen("ge.txt","r");
+                    }
+
+                    else{
+                            echo "<div class='alert alert-warning' role='alert'>";
+                            echo 'Não há nenhuma solicitação registrada';
+                            echo '</div>';
+                            exit();
                     }
 
                    
@@ -56,6 +64,8 @@
                     echo "</ul>"; 
                     fclose($handle);
                 }
+                
+
             ?>
         </div>
         

@@ -20,28 +20,44 @@
             <hr>
             
             <?php
-        
-                foreach ($i = ['DSM','GE'] as $curso) { 
-        
-                     if ($curso == 'DSM') {
-                        $handle = fopen("dsm.txt","r");
-                    }
-                    else{
-                        $handle = fopen("ge.txt","r");
-                    }
-        
-                    echo "<ul class='list-group'>";   
-                    while (!feof($handle)) {
-                        $line = fgets($handle);
-        
-                        if (!empty($line)) {
-                            echo " <li class='list-group-item d-flex justify-content-between align-items-center'>".$line."<span class='badge badge-primary badge-pill'>";
-                            echo $curso."</span>";
+
+
+                    if (file_exists("dsm.txt") or file_exists("ge.txt")) {
+                        foreach ($i = ['DSM','GE'] as $curso) { 
+                            if ($curso == 'DSM' && file_exists("dsm.txt")) {
+                                $handle = fopen("dsm.txt","r");
+                            }
+                            elseif ($curso == 'GE' && file_exists("ge.txt")){
+                                $handle = fopen("ge.txt","r");
+                            }
+
+                            else{
+                                continue;
+                            }
+
+                            echo "<ul class='list-group'>";   
+
+                            while (!feof($handle)) {
+                                $line = fgets($handle);
+                
+                                if ($line) {
+                                    echo " <li class='list-group-item d-flex justify-content-between align-items-center'>".$line."<span class='badge badge-primary badge-pill'>";
+                                    echo $curso."</span>";
+                                }
+                            }
+                            echo "</ul>"; 
+                            fclose($handle);
                         }
                     }
-                    echo "</ul>"; 
-                    fclose($handle);
-                }
+
+                    else{
+                        echo "<div class='alert alert-warning' role='alert'>";
+                        echo 'Não há nenhuma solicitação registrada';
+                        echo '</div>';
+                    }
+                    
+
+                         
             ?>
         
         </div>'
