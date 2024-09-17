@@ -63,7 +63,7 @@ Central de funções disponibilizadas aos coordenadores, essa tela possui os seg
    <li>Textarea: Elemento html que permite a inserção de longos textos.</li>  
 </ul>
 
-<b>Visualizar solicitações</b> 
+<b>VISUALIZAR</b> 
 
 Tela voltada a permitir que tanto o coordenador quanto o técnico possam consultar a lista de solicitações por curso. Essa tela possui os seguintes elementos interativos: 
 
@@ -76,5 +76,9 @@ Tela voltada a permitir que tanto o coordenador quanto o técnico possam consult
    <li>Botão voltar: possibilita retornar para a deshboard. </li>
 
 </ul>
+
+<b>TODAS</b>
+
+Essa tela mostra todas as solicitações feitas independente do curso. Não há nenhum elemento interativo nesta tela. 
 
  
