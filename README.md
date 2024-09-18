@@ -7,9 +7,9 @@ Repositório criado com a finalidade de catalogar todas as versões da 1ª ativi
 
 Tela de login do sistema. O logins já registrados são:   
 
-	Usuario : coordenacao  
+	Usuario : coordenacao
 
-	Senha : coordenacao 
+	Senha : coordenacao
 
 	 
 
