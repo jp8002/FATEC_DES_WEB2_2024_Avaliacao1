@@ -13,12 +13,12 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_SESSION["auth"]) && !empty($_POST['usuario']) && !empty($_POST['senha'])) {
         $_SESSION["auth"] = TRUE;
 
-        if ($_POST["usuario"] == "adm" && $_POST["senha"] == "1234")  {
+        if ($_POST["usuario"] == "coordenacao" && $_POST["senha"] == "coordenacao")  {
             $_SESSION["user"] = "coordenacao";
             header("location:dash_coor.php");
         }
 
-        elseif ($_POST["usuario"] == "casse" && $_POST["senha"] == "senha")  {
+        elseif ($_POST["usuario"] == "tecnicos" && $_POST["senha"] == "tecnicos")  {
             $_SESSION["user"] = "tecnico";
             header("location:dash_tec.php");
         }
