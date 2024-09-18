@@ -13,9 +13,9 @@ Tela de login do sistema. O logins já registrados são:
 
 	 
 
-	Usuario : tecnicos 
+	Usuario : tecnicos
 
-	Senha: tecnicos 
+	Senha: tecnicos
 
  
 
