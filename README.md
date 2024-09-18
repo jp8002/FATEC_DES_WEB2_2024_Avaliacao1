@@ -7,15 +7,15 @@ Repositório criado com a finalidade de catalogar todas as versões da 1ª ativi
 
 Tela de login do sistema. O logins já registrados são:   
 
-	Usuario : adm  
+	Usuario : coordenacao  
 
-	Senha : 1234 
+	Senha : coordenacao 
 
 	 
 
-	Usuario : casse 
+	Usuario : tecnicos 
 
-	Senha: senha 
+	Senha: tecnicos 
 
  
 
